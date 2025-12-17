@@ -1,20 +1,19 @@
 # Portfolio Website
 
-Personal portfolio website showcasing my skills, projects, and experience.
+This is my personal portfolio website, where I showcase my skills and provide ways to get in touch.
 
-Live Demo: https://danielgodigna.github.io/Portfolio/about.html
+🔗 **Live Demo:** [View it here](https://danielgodigna.github.io/Portfolio/about.html)
 
+📸 **Preview**
 ![Portfolio Preview](preview.png)
 
-🛠 Built With
-HTML for structure
-CSS for styling and layout
+## 🛠 Built With
+HTML5 and CSS3
 
-📁 Features
-Fully responsive design for desktop and mobile
-Project showcase section
-About me and contact sections
+## 📁 Features
+The site is responsive, has a simple navigation menu, and includes sections about me and ways to contact me.
 
-🚀 How to Run Locally
-Clone the repository
-Open index.html in your browser
+## 🚀 How to Run Locally
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/DanielGodigna/Portfolio.git
