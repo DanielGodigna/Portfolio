@@ -1,8 +1,12 @@
+# Portfolio Website
+
+Personal portfolio website showcasing my skills, projects, and experience.
+
 ![Portfolio Preview](preview.png)
 
 🛠 Built With
-HTML5 for structure
-CSS3 for styling and layout
+HTML for structure
+CSS for styling and layout
 
 📁 Features
 Fully responsive design for desktop and mobile
