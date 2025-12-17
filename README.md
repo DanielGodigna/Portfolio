@@ -10,3 +10,4 @@ About me and contact sections
 🚀 How to Run Locally
 Clone the repository
 Open index.html in your browser
+<img src="preview.png" alt="Portfolio Preview" align="right" width="350"/>
