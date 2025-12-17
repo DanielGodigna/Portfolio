@@ -15,7 +15,7 @@
   src: url("../fonts/inter-v20-latin-regular.woff2") format("woff2");
 }
 
-/* 2. BASE RESET */
+/* 2. BASE RESET & MESH BACKGROUND */
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
@@ -24,145 +24,166 @@ html {
 
 body {
   font-family: "interregular", sans-serif;
-  font-size: 1.6rem; /* 16px */
-  line-height: 1.6;
+  font-size: 1.6rem; 
+  line-height: 1.7;
   color: #1a1a1a;
-  background-color: #fcfcfc;
+  
+  /* Soft Mesh Background */
+  background-color: #f0f4f4;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(0, 93, 93, 0.05) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(0, 93, 93, 0.03) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(0, 93, 93, 0.05) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(0, 93, 93, 0.03) 0px, transparent 50%);
+  
   margin: 0;
+  overflow-x: hidden;
 }
 
-/* 3. SKIP LINK - Fully hidden */
+/* 3. SKIP LINK - ACCESSIBILITY */
 .skip-link {
   position: absolute;
   top: -10rem;
-  left: 2rem;
+  left: 2.5rem;
   background: #005d5d;
-  color: white;
-  padding: 1.2rem 2.4rem;
-  z-index: 9999;
+  color: white !important;
+  padding: 1.5rem 2.5rem;
+  z-index: 10002;
   text-decoration: none;
   font-family: "robotomedium", sans-serif;
   font-size: 1.4rem;
-  transition: top 0.3s ease;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: top 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
 }
-.skip-link:focus {
-  top: 0;
-}
+.skip-link:focus { top: 0; outline: 3px solid #005d5d; }
 
 /* 4. HEADER */
 .site-header {
   background-color: #0a0f0f;
-  /* This adds a 'matte' charcoal layer over your photo */
-  background-image: linear-gradient(
-      rgba(26, 26, 26, 0.85),
-      rgba(18, 18, 18, 0.9)
-    ),
+  background-image: linear-gradient(rgba(26, 26, 26, 0.75), rgba(18, 18, 18, 0.85)),
     url(../images/background.jpg);
   background-size: cover;
   background-position: center;
-  padding: 8rem 2rem;
+  padding: clamp(6rem, 10vh, 12rem) 2rem;
   text-align: center;
   color: #fcfcfc;
-  border-bottom: 2px solid #005d5d;
+  border-bottom: 3px solid #005d5d;
 }
 
 .site-title {
   font-family: "robotomedium", sans-serif;
-  font-size: 4.2rem;
+  font-size: clamp(3.2rem, 8vw, 5.2rem); 
   margin: 0;
 }
 
 .site-subtitle {
   font-family: "robotomedium", sans-serif;
-  font-size: 1.3rem;
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.7);
   margin: 1.5rem 0 3.5rem 0;
 }
 
-/* 5. NAVIGATION & HOVER */
+/* 5. NAVIGATION - GLOSSY */
 .site-nav {
-  background: #ffffff;
   position: sticky;
   top: 0;
-  z-index: 1000;
-  border-bottom: 0.1rem solid #ebebeb;
+  z-index: 10001;
+  background: rgba(255, 255, 255, 0.75); 
+  backdrop-filter: blur(15px) saturate(180%);
+  -webkit-backdrop-filter: blur(15px) saturate(180%);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .nav-list {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   list-style: none;
-  padding: 1.4rem 0;
+  padding: 1.2rem 0;
   margin: 0;
 }
 
 .nav-list li a {
   font-family: "robotomedium", sans-serif;
-  padding: 0.5rem 2.2rem;
+  padding: 0.8rem 2rem;
   text-decoration: none;
   color: #1a1a1a;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   text-transform: uppercase;
-  transition: color 0.3s ease;
+  transition: all 0.25s ease;
+  border-radius: 50px;
 }
 
 .nav-list li a:hover {
+  background: rgba(0, 93, 93, 0.08);
   color: #005d5d;
 }
 
-/* 6. THE UNIFIED BUTTON DESIGN */
+/* 6. GLOSSY BUTTONS */
 .btn-cta {
   font-family: "robotomedium", sans-serif;
   background-color: #005d5d;
-  color: #ffffff !important; /* Forces white text even on <a> tags */
-  padding: 1.4rem 3rem 1.11rem 3rem;
-  border-radius: 4px;
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0.18), rgba(0,0,0,0.05));
+  color: #ffffff !important;
+  padding: 1.4rem 3.2rem 1.19rem 3.2rem;
+  border-radius: 12px;
   text-decoration: none;
   display: inline-block;
   font-size: 1.3rem;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  border: none;
+  border: 1px solid rgba(0,0,0,0.15);
   cursor: pointer;
-  transition: all 0.3s ease;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 4px 10px rgba(0, 93, 93, 0.15);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .btn-cta:hover {
   background-color: #004a4a;
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0, 93, 93, 0.3);
+  transform: translateY(-3px);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 8px 18px rgba(0, 93, 93, 0.25);
 }
 
-/* 7. CARDS & FORM */
+/* 7. GLASS CARDS & REVEAL */
 .content-single {
-  max-width: 72rem;
+  max-width: 76rem;
+  width: 92%;
   margin: 5rem auto;
-  padding: 0 2rem;
+}
+
+@keyframes revealUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .card {
-  padding: 4.5rem;
-  background: white;
-  border-radius: 4px;
-  border: 0.1rem solid #ebebeb;
-  box-shadow: 0 1rem 3.5rem rgba(0, 0, 0, 0.03);
+  padding: clamp(2.5rem, 6vw, 5rem);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
   margin-bottom: 4rem;
+  animation: revealUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) both;
 }
 
 h2 {
   font-family: "robotomedium", sans-serif;
-  font-size: 2.1rem;
+  font-size: clamp(1.8rem, 4vw, 2.2rem);
   color: #005d5d;
   text-transform: uppercase;
-  border-left: 0.5rem solid #005d5d;
-  padding-left: 1.5rem;
-  margin: 0 0 2.5rem 0;
+  border-left: 5px solid #005d5d;
+  padding-left: 2rem;
+  margin: 0 0 3rem 0;
 }
 
+/* 8. FORM FIXES */
 .form-group {
   margin-bottom: 2.5rem;
+  text-align: left;
 }
 
 .form-label {
@@ -170,25 +191,43 @@ h2 {
   font-family: "robotomedium", sans-serif;
   font-size: 1.1rem;
   text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #666;
   margin-bottom: 0.8rem;
 }
 
 .form-input,
 .form-textarea {
   width: 100%;
-  padding: 1.2rem;
+  padding: 1.4rem;
   font-family: "interregular", sans-serif;
-  font-size: 1.4rem;
-  border: 0.1rem solid #ebebeb;
-  border-radius: 4px;
-  box-sizing: border-box;
+  font-size: 1.5rem;
+  color: #1a1a1a;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid #d1d8d8;
+  border-radius: 10px; /* Modernized rounding */
+  box-sizing: border-box; /* Critical for preventing overflow */
+  transition: all 0.3s ease;
 }
+
+.form-textarea {
+  min-height: 12rem;
+  resize: vertical;
+}
+
+/* Subtle Glow */
+.form-input:focus, 
+.form-textarea:focus {
+  outline: none;
+  background-color: #ffffff;
+  border-color: #005d5d;
+  box-shadow: 0 0 0 4px rgba(0, 93, 93, 0.1);
+}
+
+/* 9. FOOTER */
 .site-footer {
   text-align: center;
-  padding: 4rem 0;
-  color: #666;
+  padding: 6rem 2rem;
+  color: #7f8c8d;
   font-family: "robotomedium", sans-serif;
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
 }
