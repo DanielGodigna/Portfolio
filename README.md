@@ -1,6 +1,6 @@
 # Portfolio Website
 
-This is my personal portfolio site where I share a bit about myself and how to get in touch.
+Personal portfolio website showcasing my skills, experience, and ways to get in touch.
 
 🔗 **Live Demo:** https://danielgodigna.github.io/Portfolio/about.html
 
@@ -8,10 +8,13 @@ This is my personal portfolio site where I share a bit about myself and how to g
 ![Portfolio Preview](preview.png)
 
 ## 🛠 Built With
-I built this using HTML5 and CSS3.
+- HTML5
+- CSS3
 
-## 📁 What’s Inside
-The site adapts well to different screen sizes, has a simple navigation menu, and includes sections about me and how to contact me (including a LinkedIn link).
+## 📁 Features
+- Fully responsive design for desktop and mobile
+- Navigation menu
+- About & Contact sections (includes LinkedIn button)
 
 ## 🚀 How to Run Locally
 1. Clone the repository:
