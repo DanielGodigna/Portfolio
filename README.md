@@ -1,3 +1,5 @@
+![Portfolio Preview](preview.png)
+
 🛠 Built With
 HTML5 for structure
 CSS3 for styling and layout
@@ -10,4 +12,3 @@ About me and contact sections
 🚀 How to Run Locally
 Clone the repository
 Open index.html in your browser
-<img src="preview.png" alt="Portfolio Preview" align="right" width="350"/>
