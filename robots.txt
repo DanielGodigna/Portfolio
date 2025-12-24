@@ -1,0 +1,19 @@
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baidu
+Disallow: /
+
+User-agent: Yandex
+Disallow: /
+
+User-agent: *
+Allow: /
+
+Sitemap: https://danielgodigna.github.io/Portfolio/sitemap.xml
